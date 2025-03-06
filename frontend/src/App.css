@@ -1,0 +1,331 @@
+
+.header {
+  position: fixed; /* Фиксируем хедер */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 147px; /* Фиксированная высота */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрируем содержимое */
+  background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный фон */
+  backdrop-filter: blur(20px); /* Размытие */
+  z-index: 100;
+}
+
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #ab9422 50%, #c0c0c0 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Bookman, URW Bookman L, serif;
+}
+
+.main {
+  padding-top: 147px; /* Добавляем отступ сверху, равный высоте хедера */
+}
+
+  /* Стили для логотипа */
+  .logo img {
+    height: 80px; /* Устанавливаем размер логотипа */
+    cursor: pointer; /* Указатель на логотип как на ссылку */
+  }
+  
+  /* Стили для навигации */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .imgUser {
+    height: 35px;
+  }
+
+  .createProposal {
+    background-color: #000000; /* Зеленый цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругляем углы */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+  }
+
+  .createProposal:hover {
+    background-color: #b9d408; /* Темно-зеленый цвет при наведении */
+  }
+  
+  .createProposal:active {
+    background-color: #000000; /* Еще более темный зеленый при нажатии */
+  }
+
+  .task-bar {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .task-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .task-bar ul li {
+    margin-right: 15px;
+  }
+  
+  .task-bar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .task-bar ul li a:hover {
+    color: #007bff;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-content input,
+  .modal-content textarea {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .modal-content button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:first-of-type {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .modal-content button:last-of-type {
+    background-color: #f44336;
+    color: white;
+  }
+
+  /* Основные стили для кнопок */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+  }
+  
+  button:active {
+    transform: scale(0.95); /* Уменьшение кнопки при нажатии */
+  }
+  
+  /* Стили для кнопки "Создать предложение" */
+  .createProposal {
+    background-color: #000000; /* Зелёный цвет */
+    color: white;
+  }
+  
+  .createProposal:hover {
+    background-color: #000000; /* Тёмно-зелёный при наведении */
+  }
+  
+  /* Стили для кнопок в списке предложений */
+  .proposal button {
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+
+  /* Стили для ссылок-вкладок в header */
+  header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #f0f0f0; /* Светлый фон при наведении */
+    color: #000;
+  }
+  
+  header nav ul li a:active {
+    background-color: #ddd; /* Ещё темнее при нажатии */
+  }
+
+  .proposals-list {
+    padding: 20px;
+  }
+  
+  .proposal {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .voting {
+    margin-top: 10px;
+  }
+  
+  .voting button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .voting button:hover {
+    background-color: #ddd;
+  }
+
+  /* Стили для кнопок фильтрации в header */
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px; /* Отступ от других элементов */
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #000000; /* Синий цвет по умолчанию */
+  color: white;
+}
+
+.filter-buttons button:hover {
+  transform: scale(1.05); /* Увеличение кнопки при наведении */
+  background-color: #000000; /* Тёмно-синий при наведении */
+}
+
+.filter-buttons button:active {
+  transform: scale(0.95); /* Уменьшение кнопки при нажатии */
+}
+
+/* Индивидуальные стили для каждой кнопки */
+.filter-buttons button:nth-child(1) {
+  background-color: #000000; /* Зелёный для "Новые" */
+}
+
+.filter-buttons button:nth-child(1):hover {
+  background-color: #000000; /* Тёмно-зелёный при наведении */
+}
+
+.profile-button {
+  background-color: #f2ff00;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.profile-button:hover {
+  background-color: #e5ed0d;
+}
+
+/* Основной контейнер приложения */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+/* Основной контент */
+.main {
+  flex: 1; /* Растягивается, чтобы занять оставшееся пространство */
+}
+
+/* Стили для футера */
+.footer {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  text-align: center; 
+  border-top: 1px solid #e9ecef;
+  margin-top: auto; /* Прижимает футер к нижней части */
+}
+
+.footer h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #000000;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #000000;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.footer ul li strong {
+  color: #000000;
+}

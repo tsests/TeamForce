@@ -1,0 +1,60 @@
+/* Основной стиль для карточки предложения */
+.proposal-card {
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Bookman, URW Bookman L, serif;
+  }
+  
+  /* Стиль для заголовка предложения */
+  .proposal-card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #ffffff;
+  }
+  
+  /* Стиль для текста описания и других параграфов */
+  .proposal-card p {
+    font-size: 1em;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+  
+  /* Стиль для секции с информацией о дате и голосах */
+  .proposal-card .card-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #ffffff;
+  }
+  
+  /* Стиль для статуса и голосов */
+  .proposal-card .card-info .status,
+  .proposal-card .card-info .votes {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  /* Стиль для секции комментариев */
+  .proposal-card .comments {
+    margin-top: 10px;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+  }
+  
+  /* Стиль для каждого комментария */
+  .proposal-card .comments p {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  
+  /* Стиль для заголовка комментариев */
+  .proposal-card .comments h3 {
+    color: white;
+  }
