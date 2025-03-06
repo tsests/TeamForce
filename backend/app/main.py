@@ -11,22 +11,14 @@ from passlib.context import CryptContext
 from typing import List
 from pydantic import BaseModel
 from typing import Optional
-# Настройки подключения к PostgreSQL
-# DATABASE_CONFIG = {
-#     "dbname": "postgres",
-#     "user": "postgres",
-#     "password": "12345",
-#     "host": "db",  # Имя контейнера PostgreSQL
-#     "port": "5432",
-#     "client_encoding": "utf8",
-# }
+import os
 
 DATABASE_CONFIG = {
-    "dbname": "users",
-    "user": "set",
-    "password": "dwordpass",
-    "host": "172.30.192.44",  # Имя контейнера PostgreSQL
-    "port": "5432",
+    "dbname": os.getenv("DB_NAME", "default_dbname"),
+    "user": os.getenv("DB_USER", "default_user"),
+    "password": os.getenv("DB_PASSWORD", "default_password"),
+    "host": os.getenv("DB_HOST", "localhost"),
+    "port": os.getenv("DB_PORT", "5432"),
     "client_encoding": "utf8",
 }
 
